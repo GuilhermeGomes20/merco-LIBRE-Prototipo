@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mercado Livre Protótipo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Mercado Livre</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#" id="cart-link">Carrinho (0)</a>
+      <a href="login.html">Perfil</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="product">
+      <h2>Smartphone XYZ</h2>
+      <p>R$ 1.299,99</p>
+      <button class="add-cart">Adicionar ao carrinho</button>
+    </section>
+
+    <section class="product">
+      <h2>Fone Bluetooth ABC</h2>
+      <p>R$ 199,90</p>
+      <button class="add-cart">Adicionar ao carrinho</button>
+    </section>
+
+    <section class="product">
+      <h2>Notebook Gamer Ultra</h2>
+      <p>R$ 5.499,00</p>
+      <button class="add-cart">Adicionar ao carrinho</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mercado Livre Protótipo</p>
+  </footer>
+
+  <script>
+    let count = 0;
+    const cartLink = document.getElementById('cart-link');
+    document.querySelectorAll('.add-cart').forEach(btn => {
+      btn.addEventListener('click', () => {
+        count++;
+        cartLink.textContent = `Carrinho (${count})`;
+      });
+    });
+  </script>
+</body>
+</html>
